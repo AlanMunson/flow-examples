@@ -1,0 +1,17 @@
+{
+  "name": "flow-examples",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Alan Munson <amunson@costar.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/ -d dist/",
+    "prepublish": "yarn build",
+    "watch": "babel -w src/ -d dist/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.77.0"
+  }
+}
