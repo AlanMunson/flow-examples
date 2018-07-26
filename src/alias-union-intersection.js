@@ -1,6 +1,6 @@
 // @flow
 // Type alias
-type EmployeeId: string;
+type EmployeeId = string;
 type UserId = number;
 type User = {
   userId: UserId,
