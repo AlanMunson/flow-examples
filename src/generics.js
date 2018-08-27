@@ -1,5 +1,5 @@
 // @flow
-const identity = < T > (val: T): T => {
+const identity = <T>(val: T): T => {
   return val;
 };
 const numIdentity = identity(1);

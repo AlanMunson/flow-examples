@@ -1,6 +1,6 @@
 // @flow
-const myParamIsOptional = (val: ? string): void => {
-  console.log(`val = '${val || 'undefined'}'`);
+const myParamIsOptional = (val: ?string): void => {
+  console.log(`val = '${val || "undefined"}'`);
 };
 myParamIsOptional("Hello!"); // OK
 myParamIsOptional(); // OK
