@@ -20,16 +20,15 @@ type Dispatch = (action: Action | ThunkAction | PromiseAction) => any;
 
 // Typing Redux reducers
 const reducer = (
-  state: State = {foo: "", bar: 0, baz: {}},
+  state: State = { foo: "", bar: 0, baz: {} },
   action: Action
 ): State => {
   switch (action.type) {
     case "FOO":
-      return {...state, foo: ((action: any): FooAction).payload || ""};
+      return { ...state, foo: ((action: any): FooAction).payload || "" };
     case "BAR":
-      return {...state, bar: ((action: any): BarAction).payload || 0};
+      return { ...state, bar: ((action: any): BarAction).payload || 0 };
     default:
       return state;
   }
 };
-
