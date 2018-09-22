@@ -13,9 +13,18 @@ type State = {
 
 class MyComponent extends React.Component<Props, State> {
   static defaultProps = { value: 0 };
+
+  // Ref property - must be nullable
+  button: ?HTMLButtonElement;
+
   render() {
     const { show, value } = this.props;
-    return <div className={show ? "visible" : "hidden"}>{value}</div>;
+    return (
+      <div className={show ? "visible" : "hidden"}>
+        {value}
+        <button ref={button => (this.button = button)}>Click Me!</button>
+      </div>
+    );
   }
 }
 
